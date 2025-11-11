@@ -24,9 +24,6 @@ class UserAuthTest {
         // 異常系: パスワードが間違い
         XXXXXXXXXXX;  // 
 
-        // 否定(Not)
-        XXXXXXXXXXX;  // 
-
         // 和(Or): ユーザーIDが間違いまたはパスワードが間違い
         XXXXXXXXXXX;  
     }
