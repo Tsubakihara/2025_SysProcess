@@ -12,8 +12,17 @@ public class ContactForm {
     }
 
     // 認証メソッド
-    public boolean isValid() { 
-        return !name.isEmpty() && email.contains("@") && !message.isEmpty(); 
+    public boolean isValid() {
+        // 名前チェック
+        if (name == null || name.trim().isEmpty()) return false;
+
+        // メールチェック
+        if (email == null || !email.contains("@") || email.contains(" ")) return false;
+
+        // メッセージチェック
+        if (message == null || message.trim().isEmpty()) return false;
+
+        return true;
     }
 
     // setter/getter を追加
