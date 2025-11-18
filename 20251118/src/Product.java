@@ -1,4 +1,3 @@
-// ファイル名: Product.java
 class Product { 
     private String name; 
     private int price; 
@@ -11,23 +10,13 @@ class Product {
 
     // バリデーションメソッド
     boolean isValid() { 
-        return !name.isEmpty() && price > 0; 
+        return name != null && !name.trim().isEmpty() && price > 0; 
     }
 
     // setter/getter
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setName(String name) { this.name = name; }
+    public String getName() { return name; }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public int getPrice() {
-        return price;
-    }
+    public void setPrice(int price) { this.price = price; }
+    public int getPrice() { return price; }
 }
